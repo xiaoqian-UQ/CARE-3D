@@ -1,0 +1,16 @@
+# GPT-Score evaluation (paper protocol). The API key is read from OPENAI_API_KEY.
+gpt_model: gpt-4o-2024-11-20
+api_key: ${oc.env:OPENAI_API_KEY,null}
+api_version: null
+region: null
+evaluation_assets: ${oc.env:SCENECOT_EVAL_ASSETS,./data_assets/evaluation_assets}
+gpt_score_prompt_path: ${oc.env:SCENECOT_GPT_SCORE_PROMPT,./assets/eval/MSQA_eval_prompt.json}   # see README "Evaluation"
+data_eval_base: ${oc.env:SCENECOT_EVAL_ROOT,./outputs/eval_legacy}   # root path where converted predictions are stored
+result_dir: ${data_eval_base}
+evaluate_dataset: ['QACOTScanNetMSR3D']   # QACOTScanNetMSR3D (MSQA) or GQA3D (Beacon3D)
+gpt_score_flag: True
+evaluated_models: ['']  # model name(s) under result_dir
+testset_mapping_path: ${evaluation_assets}/testset_mapping.json
+evaluation_protocol: ${oc.env:SCENECOT_EVALUATION_PROTOCOL,auto}   # msqa | gqa3d | auto
+gqa3d_annotation_path: ${oc.env:GQA3D_TEST_ANNOTATION,./data_assets/GQA3D/gqa3d_test.json}
+gqa3d_obj_correct_threshold: 75

@@ -1,0 +1,2 @@
+"""SceneCOT-specific training helpers."""
+

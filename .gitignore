@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+build/
+*.so
+
+# Data, weights and run artifacts
+data_assets/
+model_assets/
+outputs/
+checkpoints/
+logs/
+wandb/
+.cache/
+*.log
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store

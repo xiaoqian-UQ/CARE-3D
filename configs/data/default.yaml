@@ -1,0 +1,55 @@
+sceneverse_base: ${oc.env:SCENECOT_DATA_ROOT,./data_assets}/SceneVerse
+cot_annotation_base: ${oc.env:SCENECOT_DATA_ROOT,./data_assets}/leo2-cot
+
+# Clear COT dataset root (HF layout): ${SCENECOT_COT_DATA_ROOT}/MSQA and /GQA3D
+# You can override each dataset path independently via SCENECOT_MSR3D_ANNO_DIR / SCENECOT_GQA3D_ANNO_DIR.
+cot_data_root: ${oc.env:SCENECOT_COT_DATA_ROOT,${oc.env:SCENECOT_DATA_ROOT,./data_assets}/scenecot_cot_data}
+msr3d_anno_dir: ${oc.env:SCENECOT_MSR3D_ANNO_DIR,${data.cot_data_root}/MSQA}
+gqa3d_anno_dir: ${oc.env:SCENECOT_GQA3D_ANNO_DIR,${data.cot_data_root}/GQA3D}
+
+mmscan_inst_mask_base: ${oc.env:SCENECOT_DATA_ROOT,./data_assets}/mmscan_instance_masks
+
+scan_family_base: ${oc.env:SCENECOT_DATA_ROOT,./data_assets}/scan_family
+
+obj_feat_2d_base:
+  ScanNet: ${oc.env:SCENECOT_DATA_ROOT,./data_assets}/ScanNet   # LEO-2_feature_ScanNet.zip
+
+obj_num_points: 1024
+obj_img_feat_dim: 768
+obj_vox_feat_dim: 768
+obj_feat_base:
+  ScanNet: ${oc.env:SCENECOT_DATA_ROOT,./data_assets}/scene-verse-pred-all/ScanNet
+
+obj_img_base:
+  ScanNet: ${oc.env:SCENECOT_DATA_ROOT,./data_assets}/scannet   # scenecot_imgs.zip
+
+img_size: [224, 224]
+
+pq3d_tokenizer_path: ${oc.env:SCENECOT_PQ3D_TOKENIZER_PATH,${oc.env:SCENECOT_MODEL_ROOT,./model_assets}/clip-vit-large-patch14}
+
+qa:
+  scanqa:
+    anno_dir: ${data.cot_annotation_base}/cotqa/scanqa
+    pc_type: gt
+  msr3d:
+    anno_dir: ${data.msr3d_anno_dir}
+    pc_type: gt
+
+cotqa:
+  use_pred_for_train: False
+  anno_dir: ${data.cot_annotation_base}/cotqa
+  sqa3d:
+    anno_dir: ${data.cot_annotation_base}/cotqa/sqa3d
+    pc_type: gt
+    label_type: gt
+    use_oracle_thought: False
+  msr3d:
+    anno_dir: ${data.msr3d_anno_dir}
+    pc_type: gt
+    label_type: gt
+    use_oracle_thought: False
+  gqa3d:
+    anno_dir: ${data.gqa3d_anno_dir}
+    pc_type: pred
+
+nms_iou_threshold: 0.25

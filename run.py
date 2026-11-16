@@ -1,0 +1,44 @@
+import os
+from datetime import datetime
+
+import hydra
+from accelerate.logging import get_logger
+from omegaconf import OmegaConf
+
+import common.io_utils as iu
+from common.misc import rgetattr
+from trainer.build import build_trainer
+
+logger = get_logger(__name__)
+
+
+@hydra.main(config_path='configs', config_name='default_cot', version_base=None)
+def main(cfg):
+    os.environ['TOKENIZERS_PARALLELISM'] = 'true'   # suppress hf tokenizer warning
+    if 'hf_home' in cfg and cfg.hf_home:
+        os.environ["HF_HOME"] = cfg.hf_home
+        os.environ["HUGGINGFACE_HUB_CACHE"] = cfg.hf_home
+        os.environ["TRANSFORMERS_CACHE"] = cfg.hf_home
+    naming_keys = [cfg.name]
+    for name in cfg.naming_keywords:
+        key = str(rgetattr(cfg, name))
+        if key:
+            naming_keys.append(key)
+    exp_name = '_'.join(naming_keys)
+
+    # Record the experiment
+    cfg.exp_dir = os.path.join(
+        cfg.base_dir, exp_name,
+        f"{datetime.now().strftime('%Y-%m-%d-%H:%M:%S')}" if 'time' in cfg.naming_keywords else ""
+    )
+    iu.make_dir(cfg.exp_dir)
+    OmegaConf.save(cfg, os.path.join(cfg.exp_dir, 'config.yaml'), resolve=True)
+
+    trainer = build_trainer(cfg)
+    trainer.run()
+
+
+if __name__ == '__main__':
+    import multiprocessing
+    multiprocessing.set_start_method('spawn')  # NOTE: spawn is safer for cuda operation
+    main()

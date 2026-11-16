@@ -1,0 +1,1087 @@
+{
+ "description": "MSQA validation subset used for GRPO model selection/monitoring: 20 questions per question type (180 total), in the original order.",
+ "source_split": "MSQA val (situated_qa_val_pure_txt.json)",
+ "num_rows": 180,
+ "rows": [
+  {
+   "scene_id": "scene0342_00",
+   "question_id": "4657",
+   "index": 859,
+   "question_type": "affordance"
+  },
+  {
+   "scene_id": "scene0663_00",
+   "question_id": "3435",
+   "index": 720,
+   "question_type": "counting"
+  },
+  {
+   "scene_id": "scene0207_00",
+   "question_id": "2558",
+   "index": 845,
+   "question_type": "room type"
+  },
+  {
+   "scene_id": "scene0356_00",
+   "question_id": "1930",
+   "index": 33,
+   "question_type": "description"
+  },
+  {
+   "scene_id": "scene0011_00",
+   "question_id": "6122",
+   "index": 875,
+   "question_type": "room type"
+  },
+  {
+   "scene_id": "scene0663_00",
+   "question_id": "3428",
+   "index": 853,
+   "question_type": "affordance"
+  },
+  {
+   "scene_id": "scene0030_00",
+   "question_id": "4076",
+   "index": 150,
+   "question_type": "attribute"
+  },
+  {
+   "scene_id": "scene0329_00",
+   "question_id": "520",
+   "index": 8,
+   "question_type": "description"
+  },
+  {
+   "scene_id": "scene0671_00",
+   "question_id": "957",
+   "index": 318,
+   "question_type": "navigation"
+  },
+  {
+   "scene_id": "scene0030_00",
+   "question_id": "3816",
+   "index": 373,
+   "question_type": "navigation"
+  },
+  {
+   "scene_id": "scene0441_00",
+   "question_id": "2121",
+   "index": 230,
+   "question_type": "existence"
+  },
+  {
+   "scene_id": "scene0095_00",
+   "question_id": "5915",
+   "index": 873,
+   "question_type": "room type"
+  },
+  {
+   "scene_id": "scene0307_00",
+   "question_id": "2840",
+   "index": 45,
+   "question_type": "description"
+  },
+  {
+   "scene_id": "scene0671_00",
+   "question_id": "971",
+   "index": 819,
+   "question_type": "room type"
+  },
+  {
+   "scene_id": "scene0462_00",
+   "question_id": "3010",
+   "index": 716,
+   "question_type": "counting"
+  },
+  {
+   "scene_id": "scene0196_00",
+   "question_id": "7100",
+   "index": 886,
+   "question_type": "affordance"
+  },
+  {
+   "scene_id": "scene0500_00",
+   "question_id": "4201",
+   "index": 737,
+   "question_type": "counting"
+  },
+  {
+   "scene_id": "scene0030_00",
+   "question_id": "3807",
+   "index": 634,
+   "question_type": "refer"
+  },
+  {
+   "scene_id": "scene0149_00",
+   "question_id": "3308",
+   "index": 243,
+   "question_type": "existence"
+  },
+  {
+   "scene_id": "scene0599_00",
+   "question_id": "4993",
+   "index": 763,
+   "question_type": "counting"
+  },
+  {
+   "scene_id": "scene0695_00",
+   "question_id": "116",
+   "index": 206,
+   "question_type": "existence"
+  },
+  {
+   "scene_id": "scene0030_00",
+   "question_id": "3770",
+   "index": 633,
+   "question_type": "refer"
+  },
+  {
+   "scene_id": "scene0665_00",
+   "question_id": "5324",
+   "index": 867,
+   "question_type": "room type"
+  },
+  {
+   "scene_id": "scene0064_00",
+   "question_id": "3694",
+   "index": 147,
+   "question_type": "attribute"
+  },
+  {
+   "scene_id": "scene0088_00",
+   "question_id": "6149",
+   "index": 879,
+   "question_type": "affordance"
+  },
+  {
+   "scene_id": "scene0598_00",
+   "question_id": "1175",
+   "index": 464,
+   "question_type": "spatial relationship"
+  },
+  {
+   "scene_id": "scene0342_00",
+   "question_id": "4602",
+   "index": 75,
+   "question_type": "description"
+  },
+  {
+   "scene_id": "scene0088_00",
+   "question_id": "6284",
+   "index": 877,
+   "question_type": "affordance"
+  },
+  {
+   "scene_id": "scene0629_00",
+   "question_id": "1213",
+   "index": 823,
+   "question_type": "room type"
+  },
+  {
+   "scene_id": "scene0488_00",
+   "question_id": "4490",
+   "index": 535,
+   "question_type": "spatial relationship"
+  },
+  {
+   "scene_id": "scene0088_00",
+   "question_id": "6286",
+   "index": 411,
+   "question_type": "navigation"
+  },
+  {
+   "scene_id": "scene0342_00",
+   "question_id": "4675",
+   "index": 747,
+   "question_type": "counting"
+  },
+  {
+   "scene_id": "scene0599_00",
+   "question_id": "4995",
+   "index": 863,
+   "question_type": "room type"
+  },
+  {
+   "scene_id": "scene0088_00",
+   "question_id": "6223",
+   "index": 671,
+   "question_type": "refer"
+  },
+  {
+   "scene_id": "scene0693_00",
+   "question_id": "894",
+   "index": 18,
+   "question_type": "description"
+  },
+  {
+   "scene_id": "scene0088_00",
+   "question_id": "6170",
+   "index": 188,
+   "question_type": "attribute"
+  },
+  {
+   "scene_id": "scene0500_00",
+   "question_id": "4379",
+   "index": 378,
+   "question_type": "navigation"
+  },
+  {
+   "scene_id": "scene0217_00",
+   "question_id": "83",
+   "index": 0,
+   "question_type": "description"
+  },
+  {
+   "scene_id": "scene0314_00",
+   "question_id": "5470",
+   "index": 85,
+   "question_type": "description"
+  },
+  {
+   "scene_id": "scene0549_00",
+   "question_id": "6425",
+   "index": 190,
+   "question_type": "attribute"
+  },
+  {
+   "scene_id": "scene0249_00",
+   "question_id": "4974",
+   "index": 861,
+   "question_type": "affordance"
+  },
+  {
+   "scene_id": "scene0249_00",
+   "question_id": "4905",
+   "index": 757,
+   "question_type": "counting"
+  },
+  {
+   "scene_id": "scene0343_00",
+   "question_id": "6652",
+   "index": 677,
+   "question_type": "refer"
+  },
+  {
+   "scene_id": "scene0011_00",
+   "question_id": "6100",
+   "index": 410,
+   "question_type": "navigation"
+  },
+  {
+   "scene_id": "scene0527_00",
+   "question_id": "355",
+   "index": 451,
+   "question_type": "spatial relationship"
+  },
+  {
+   "scene_id": "scene0430_00",
+   "question_id": "5272",
+   "index": 655,
+   "question_type": "refer"
+  },
+  {
+   "scene_id": "scene0144_00",
+   "question_id": "3110",
+   "index": 241,
+   "question_type": "existence"
+  },
+  {
+   "scene_id": "scene0307_00",
+   "question_id": "2781",
+   "index": 134,
+   "question_type": "attribute"
+  },
+  {
+   "scene_id": "scene0648_00",
+   "question_id": "2745",
+   "index": 503,
+   "question_type": "spatial relationship"
+  },
+  {
+   "scene_id": "scene0019_00",
+   "question_id": "6497",
+   "index": 414,
+   "question_type": "navigation"
+  },
+  {
+   "scene_id": "scene0030_00",
+   "question_id": "4027",
+   "index": 528,
+   "question_type": "spatial relationship"
+  },
+  {
+   "scene_id": "scene0277_00",
+   "question_id": "2032",
+   "index": 835,
+   "question_type": "room type"
+  },
+  {
+   "scene_id": "scene0693_00",
+   "question_id": "899",
+   "index": 818,
+   "question_type": "affordance"
+  },
+  {
+   "scene_id": "scene0462_00",
+   "question_id": "3011",
+   "index": 510,
+   "question_type": "spatial relationship"
+  },
+  {
+   "scene_id": "scene0648_00",
+   "question_id": "2761",
+   "index": 713,
+   "question_type": "counting"
+  },
+  {
+   "scene_id": "scene0314_00",
+   "question_id": "5468",
+   "index": 268,
+   "question_type": "existence"
+  },
+  {
+   "scene_id": "scene0474_00",
+   "question_id": "1720",
+   "index": 829,
+   "question_type": "room type"
+  },
+  {
+   "scene_id": "scene0011_00",
+   "question_id": "6062",
+   "index": 277,
+   "question_type": "existence"
+  },
+  {
+   "scene_id": "scene0095_00",
+   "question_id": "5926",
+   "index": 872,
+   "question_type": "room type"
+  },
+  {
+   "scene_id": "scene0568_00",
+   "question_id": "286",
+   "index": 108,
+   "question_type": "attribute"
+  },
+  {
+   "scene_id": "scene0671_00",
+   "question_id": "976",
+   "index": 820,
+   "question_type": "room type"
+  },
+  {
+   "scene_id": "scene0064_00",
+   "question_id": "3626",
+   "index": 248,
+   "question_type": "existence"
+  },
+  {
+   "scene_id": "scene0196_00",
+   "question_id": "7014",
+   "index": 428,
+   "question_type": "navigation"
+  },
+  {
+   "scene_id": "scene0663_00",
+   "question_id": "3446",
+   "index": 60,
+   "question_type": "description"
+  },
+  {
+   "scene_id": "scene0251_00",
+   "question_id": "6855",
+   "index": 198,
+   "question_type": "attribute"
+  },
+  {
+   "scene_id": "scene0251_00",
+   "question_id": "6884",
+   "index": 565,
+   "question_type": "spatial relationship"
+  },
+  {
+   "scene_id": "scene0249_00",
+   "question_id": "4861",
+   "index": 166,
+   "question_type": "attribute"
+  },
+  {
+   "scene_id": "scene0030_00",
+   "question_id": "3994",
+   "index": 371,
+   "question_type": "navigation"
+  },
+  {
+   "scene_id": "scene0697_00",
+   "question_id": "1079",
+   "index": 21,
+   "question_type": "description"
+  },
+  {
+   "scene_id": "scene0553_00",
+   "question_id": "1400",
+   "index": 824,
+   "question_type": "room type"
+  },
+  {
+   "scene_id": "scene0329_00",
+   "question_id": "588",
+   "index": 810,
+   "question_type": "affordance"
+  },
+  {
+   "scene_id": "scene0549_00",
+   "question_id": "6401",
+   "index": 881,
+   "question_type": "affordance"
+  },
+  {
+   "scene_id": "scene0663_00",
+   "question_id": "3477",
+   "index": 142,
+   "question_type": "attribute"
+  },
+  {
+   "scene_id": "scene0500_00",
+   "question_id": "4322",
+   "index": 384,
+   "question_type": "navigation"
+  },
+  {
+   "scene_id": "scene0500_00",
+   "question_id": "4195",
+   "index": 855,
+   "question_type": "affordance"
+  },
+  {
+   "scene_id": "scene0149_00",
+   "question_id": "3283",
+   "index": 138,
+   "question_type": "attribute"
+  },
+  {
+   "scene_id": "scene0693_00",
+   "question_id": "856",
+   "index": 315,
+   "question_type": "navigation"
+  },
+  {
+   "scene_id": "scene0011_00",
+   "question_id": "6036",
+   "index": 668,
+   "question_type": "refer"
+  },
+  {
+   "scene_id": "scene0343_00",
+   "question_id": "6552",
+   "index": 284,
+   "question_type": "existence"
+  },
+  {
+   "scene_id": "scene0144_00",
+   "question_id": "3148",
+   "index": 851,
+   "question_type": "affordance"
+  },
+  {
+   "scene_id": "scene0695_00",
+   "question_id": "179",
+   "index": 294,
+   "question_type": "navigation"
+  },
+  {
+   "scene_id": "scene0342_00",
+   "question_id": "4677",
+   "index": 646,
+   "question_type": "refer"
+  },
+  {
+   "scene_id": "scene0196_00",
+   "question_id": "7005",
+   "index": 884,
+   "question_type": "affordance"
+  },
+  {
+   "scene_id": "scene0671_00",
+   "question_id": "1029",
+   "index": 587,
+   "question_type": "refer"
+  },
+  {
+   "scene_id": "scene0063_00",
+   "question_id": "2254",
+   "index": 36,
+   "question_type": "description"
+  },
+  {
+   "scene_id": "scene0329_00",
+   "question_id": "495",
+   "index": 9,
+   "question_type": "description"
+  },
+  {
+   "scene_id": "scene0095_00",
+   "question_id": "5828",
+   "index": 785,
+   "question_type": "counting"
+  },
+  {
+   "scene_id": "scene0095_00",
+   "question_id": "5800",
+   "index": 667,
+   "question_type": "refer"
+  },
+  {
+   "scene_id": "scene0249_00",
+   "question_id": "4925",
+   "index": 163,
+   "question_type": "attribute"
+  },
+  {
+   "scene_id": "scene0207_00",
+   "question_id": "2511",
+   "index": 711,
+   "question_type": "counting"
+  },
+  {
+   "scene_id": "scene0430_00",
+   "question_id": "5132",
+   "index": 656,
+   "question_type": "refer"
+  },
+  {
+   "scene_id": "scene0088_00",
+   "question_id": "6167",
+   "index": 672,
+   "question_type": "refer"
+  },
+  {
+   "scene_id": "scene0088_00",
+   "question_id": "6151",
+   "index": 186,
+   "question_type": "attribute"
+  },
+  {
+   "scene_id": "scene0011_00",
+   "question_id": "6070",
+   "index": 184,
+   "question_type": "attribute"
+  },
+  {
+   "scene_id": "scene0598_00",
+   "question_id": "1138",
+   "index": 822,
+   "question_type": "room type"
+  },
+  {
+   "scene_id": "scene0329_00",
+   "question_id": "567",
+   "index": 212,
+   "question_type": "existence"
+  },
+  {
+   "scene_id": "scene0207_00",
+   "question_id": "2579",
+   "index": 39,
+   "question_type": "description"
+  },
+  {
+   "scene_id": "scene0697_00",
+   "question_id": "1095",
+   "index": 220,
+   "question_type": "existence"
+  },
+  {
+   "scene_id": "scene0030_00",
+   "question_id": "3822",
+   "index": 154,
+   "question_type": "attribute"
+  },
+  {
+   "scene_id": "scene0030_00",
+   "question_id": "4052",
+   "index": 376,
+   "question_type": "navigation"
+  },
+  {
+   "scene_id": "scene0671_00",
+   "question_id": "985",
+   "index": 218,
+   "question_type": "existence"
+  },
+  {
+   "scene_id": "scene0095_00",
+   "question_id": "5788",
+   "index": 666,
+   "question_type": "refer"
+  },
+  {
+   "scene_id": "scene0307_00",
+   "question_id": "2861",
+   "index": 506,
+   "question_type": "spatial relationship"
+  },
+  {
+   "scene_id": "scene0011_00",
+   "question_id": "6011",
+   "index": 552,
+   "question_type": "spatial relationship"
+  },
+  {
+   "scene_id": "scene0441_00",
+   "question_id": "2129",
+   "index": 707,
+   "question_type": "counting"
+  },
+  {
+   "scene_id": "scene0217_00",
+   "question_id": "81",
+   "index": 205,
+   "question_type": "existence"
+  },
+  {
+   "scene_id": "scene0643_00",
+   "question_id": "1631",
+   "index": 599,
+   "question_type": "refer"
+  },
+  {
+   "scene_id": "scene0697_00",
+   "question_id": "1084",
+   "index": 462,
+   "question_type": "spatial relationship"
+  },
+  {
+   "scene_id": "scene0030_00",
+   "question_id": "3889",
+   "index": 69,
+   "question_type": "description"
+  },
+  {
+   "scene_id": "scene0011_00",
+   "question_id": "6042",
+   "index": 89,
+   "question_type": "description"
+  },
+  {
+   "scene_id": "scene0030_00",
+   "question_id": "3925",
+   "index": 148,
+   "question_type": "attribute"
+  },
+  {
+   "scene_id": "scene0095_00",
+   "question_id": "5859",
+   "index": 786,
+   "question_type": "counting"
+  },
+  {
+   "scene_id": "scene0550_00",
+   "question_id": "1483",
+   "index": 596,
+   "question_type": "refer"
+  },
+  {
+   "scene_id": "scene0357_00",
+   "question_id": "1841",
+   "index": 831,
+   "question_type": "room type"
+  },
+  {
+   "scene_id": "scene0064_00",
+   "question_id": "3717",
+   "index": 63,
+   "question_type": "description"
+  },
+  {
+   "scene_id": "scene0670_00",
+   "question_id": "2282",
+   "index": 494,
+   "question_type": "spatial relationship"
+  },
+  {
+   "scene_id": "scene0342_00",
+   "question_id": "4608",
+   "index": 389,
+   "question_type": "navigation"
+  },
+  {
+   "scene_id": "scene0474_00",
+   "question_id": "1748",
+   "index": 601,
+   "question_type": "refer"
+  },
+  {
+   "scene_id": "scene0699_00",
+   "question_id": "763",
+   "index": 313,
+   "question_type": "navigation"
+  },
+  {
+   "scene_id": "scene0011_00",
+   "question_id": "6055",
+   "index": 787,
+   "question_type": "counting"
+  },
+  {
+   "scene_id": "scene0249_00",
+   "question_id": "4787",
+   "index": 860,
+   "question_type": "affordance"
+  },
+  {
+   "scene_id": "scene0549_00",
+   "question_id": "6412",
+   "index": 558,
+   "question_type": "spatial relationship"
+  },
+  {
+   "scene_id": "scene0077_00",
+   "question_id": "2948",
+   "index": 850,
+   "question_type": "affordance"
+  },
+  {
+   "scene_id": "scene0695_00",
+   "question_id": "132",
+   "index": 448,
+   "question_type": "spatial relationship"
+  },
+  {
+   "scene_id": "scene0196_00",
+   "question_id": "7048",
+   "index": 804,
+   "question_type": "counting"
+  },
+  {
+   "scene_id": "scene0329_00",
+   "question_id": "538",
+   "index": 111,
+   "question_type": "attribute"
+  },
+  {
+   "scene_id": "scene0549_00",
+   "question_id": "6396",
+   "index": 279,
+   "question_type": "existence"
+  },
+  {
+   "scene_id": "scene0663_00",
+   "question_id": "3454",
+   "index": 61,
+   "question_type": "description"
+  },
+  {
+   "scene_id": "scene0249_00",
+   "question_id": "4868",
+   "index": 164,
+   "question_type": "attribute"
+  },
+  {
+   "scene_id": "scene0088_00",
+   "question_id": "6265",
+   "index": 878,
+   "question_type": "affordance"
+  },
+  {
+   "scene_id": "scene0568_00",
+   "question_id": "233",
+   "index": 297,
+   "question_type": "navigation"
+  },
+  {
+   "scene_id": "scene0131_00",
+   "question_id": "4405",
+   "index": 257,
+   "question_type": "existence"
+  },
+  {
+   "scene_id": "scene0599_00",
+   "question_id": "5067",
+   "index": 265,
+   "question_type": "existence"
+  },
+  {
+   "scene_id": "scene0643_00",
+   "question_id": "1598",
+   "index": 828,
+   "question_type": "room type"
+  },
+  {
+   "scene_id": "scene0095_00",
+   "question_id": "5910",
+   "index": 551,
+   "question_type": "spatial relationship"
+  },
+  {
+   "scene_id": "scene0249_00",
+   "question_id": "4985",
+   "index": 263,
+   "question_type": "existence"
+  },
+  {
+   "scene_id": "scene0088_00",
+   "question_id": "6140",
+   "index": 876,
+   "question_type": "affordance"
+  },
+  {
+   "scene_id": "scene0441_00",
+   "question_id": "2166",
+   "index": 836,
+   "question_type": "affordance"
+  },
+  {
+   "scene_id": "scene0488_00",
+   "question_id": "4558",
+   "index": 742,
+   "question_type": "counting"
+  },
+  {
+   "scene_id": "scene0164_00",
+   "question_id": "2647",
+   "index": 847,
+   "question_type": "room type"
+  },
+  {
+   "scene_id": "scene0599_00",
+   "question_id": "5033",
+   "index": 651,
+   "question_type": "refer"
+  },
+  {
+   "scene_id": "scene0088_00",
+   "question_id": "6190",
+   "index": 880,
+   "question_type": "affordance"
+  },
+  {
+   "scene_id": "scene0500_00",
+   "question_id": "4125",
+   "index": 70,
+   "question_type": "description"
+  },
+  {
+   "scene_id": "scene0307_00",
+   "question_id": "2846",
+   "index": 507,
+   "question_type": "spatial relationship"
+  },
+  {
+   "scene_id": "scene0699_00",
+   "question_id": "762",
+   "index": 584,
+   "question_type": "refer"
+  },
+  {
+   "scene_id": "scene0552_00",
+   "question_id": "2358",
+   "index": 842,
+   "question_type": "room type"
+  },
+  {
+   "scene_id": "scene0217_00",
+   "question_id": "23",
+   "index": 440,
+   "question_type": "spatial relationship"
+  },
+  {
+   "scene_id": "scene0064_00",
+   "question_id": "3685",
+   "index": 64,
+   "question_type": "description"
+  },
+  {
+   "scene_id": "scene0088_00",
+   "question_id": "6212",
+   "index": 790,
+   "question_type": "counting"
+  },
+  {
+   "scene_id": "scene0549_00",
+   "question_id": "6324",
+   "index": 412,
+   "question_type": "navigation"
+  },
+  {
+   "scene_id": "scene0251_00",
+   "question_id": "6909",
+   "index": 802,
+   "question_type": "counting"
+  },
+  {
+   "scene_id": "scene0277_00",
+   "question_id": "2022",
+   "index": 489,
+   "question_type": "spatial relationship"
+  },
+  {
+   "scene_id": "scene0251_00",
+   "question_id": "6919",
+   "index": 801,
+   "question_type": "counting"
+  },
+  {
+   "scene_id": "scene0558_00",
+   "question_id": "7270",
+   "index": 808,
+   "question_type": "counting"
+  },
+  {
+   "scene_id": "scene0552_00",
+   "question_id": "2361",
+   "index": 233,
+   "question_type": "existence"
+  },
+  {
+   "scene_id": "scene0500_00",
+   "question_id": "4312",
+   "index": 156,
+   "question_type": "attribute"
+  },
+  {
+   "scene_id": "scene0064_00",
+   "question_id": "3714",
+   "index": 721,
+   "question_type": "counting"
+  },
+  {
+   "scene_id": "scene0064_00",
+   "question_id": "3719",
+   "index": 527,
+   "question_type": "spatial relationship"
+  },
+  {
+   "scene_id": "scene0011_00",
+   "question_id": "6057",
+   "index": 669,
+   "question_type": "refer"
+  },
+  {
+   "scene_id": "scene0430_00",
+   "question_id": "5301",
+   "index": 168,
+   "question_type": "attribute"
+  },
+  {
+   "scene_id": "scene0357_00",
+   "question_id": "1882",
+   "index": 832,
+   "question_type": "room type"
+  },
+  {
+   "scene_id": "scene0144_00",
+   "question_id": "3099",
+   "index": 513,
+   "question_type": "spatial relationship"
+  },
+  {
+   "scene_id": "scene0207_00",
+   "question_id": "2597",
+   "index": 843,
+   "question_type": "affordance"
+  },
+  {
+   "scene_id": "scene0249_00",
+   "question_id": "4904",
+   "index": 754,
+   "question_type": "counting"
+  },
+  {
+   "scene_id": "scene0207_00",
+   "question_id": "2540",
+   "index": 846,
+   "question_type": "room type"
+  },
+  {
+   "scene_id": "scene0488_00",
+   "question_id": "4498",
+   "index": 641,
+   "question_type": "refer"
+  },
+  {
+   "scene_id": "scene0655_00",
+   "question_id": "5596",
+   "index": 869,
+   "question_type": "room type"
+  },
+  {
+   "scene_id": "scene0527_00",
+   "question_id": "374",
+   "index": 306,
+   "question_type": "navigation"
+  },
+  {
+   "scene_id": "scene0695_00",
+   "question_id": "125",
+   "index": 207,
+   "question_type": "existence"
+  },
+  {
+   "scene_id": "scene0144_00",
+   "question_id": "3149",
+   "index": 356,
+   "question_type": "navigation"
+  },
+  {
+   "scene_id": "scene0187_00",
+   "question_id": "5781",
+   "index": 271,
+   "question_type": "existence"
+  },
+  {
+   "scene_id": "scene0518_00",
+   "question_id": "3225",
+   "index": 51,
+   "question_type": "description"
+  },
+  {
+   "scene_id": "scene0552_00",
+   "question_id": "2446",
+   "index": 614,
+   "question_type": "refer"
+  },
+  {
+   "scene_id": "scene0462_00",
+   "question_id": "2984",
+   "index": 509,
+   "question_type": "spatial relationship"
+  },
+  {
+   "scene_id": "scene0665_00",
+   "question_id": "5415",
+   "index": 172,
+   "question_type": "attribute"
+  },
+  {
+   "scene_id": "scene0527_00",
+   "question_id": "380",
+   "index": 6,
+   "question_type": "description"
+  },
+  {
+   "scene_id": "scene0695_00",
+   "question_id": "154",
+   "index": 293,
+   "question_type": "navigation"
+  },
+  {
+   "scene_id": "scene0011_00",
+   "question_id": "6121",
+   "index": 874,
+   "question_type": "affordance"
+  },
+  {
+   "scene_id": "scene0552_00",
+   "question_id": "2390",
+   "index": 232,
+   "question_type": "existence"
+  },
+  {
+   "scene_id": "scene0249_00",
+   "question_id": "4798",
+   "index": 394,
+   "question_type": "navigation"
+  }
+ ]
+}

@@ -1,0 +1,40 @@
+tools:
+  - class_name: scenecot_verl.tools.scenecot_ground_tool.SceneCOTGroundTool
+    config:
+      type: native
+      qwen_model_path: ${oc.env:QWEN_MODEL_PATH}
+      sft_checkpoint_path: ${oc.env:SCENECOT_SFT_CKPT}
+      data_root: ${oc.env:SCENECOT_DATA_ROOT}
+      msqa_root: ${oc.env:MSQA_ROOT}
+      gqa3d_root: ${oc.env:GQA3D_ROOT}
+      object_feature_root: ${oc.env:SCENECOT_OBJECT_FEATURE_ROOT}
+      object_image_root: ${oc.env:SCENECOT_OBJECT_IMAGE_ROOT}
+      scene_feature_root: ${oc.env:SCENECOT_SCENE_FEATURE_ROOT}
+      pointnet_tokenizer_path: ${oc.env:SCENECOT_POINTNET_TOKENIZER}
+      device: ${oc.env:SCENECOT_TOOL_DEVICE,cuda}
+      dtype: bf16
+      hidden_dim: 2560
+      topk: 15
+      pc_type: ${oc.env:SCENECOT_PC_TYPE,gt}
+      enable_grounding_stats: true
+      cache_object_tokens: true
+      object_token_cache_root: ${oc.env:SCENECOT_OBJECT_TOKEN_CACHE_ROOT,""}
+      object_token_cache_mode: ${oc.env:SCENECOT_OBJECT_TOKEN_CACHE_MODE,off}
+      strict: true
+    tool_schema:
+      type: function
+      function:
+        name: scenecot_ground
+        description: SceneCOT grounding tool using actor-generated think_grd query and online PQ3D object tokens.
+        parameters:
+          type: object
+          properties:
+            query:
+              type: string
+            mode:
+              type: string
+              enum: ["prob", "loc_rect", "loc_polar", "highlight"]
+            topk:
+              type: integer
+              maximum: 15
+          required: ["query", "mode"]
