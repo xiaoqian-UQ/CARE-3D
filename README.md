@@ -6,10 +6,10 @@
 
 
 <div align="center" margin-bottom="6em">
-<a target="_blank" rel="external nofollow noopener" href="TODO">Xiaoqian Hu</a>,
-<a target="_blank" rel="external nofollow noopener" href="TODO">Ruihong Qiu</a>,
-<a target="_blank" rel="external nofollow noopener" href="TODO">Yanran Tang</a>,
-<a target="_blank" rel="external nofollow noopener" href="TODO">Sen Wang</a>
+<a target="_blank" rel="https://www.linkedin.com/in/xiaoqian-hu-69a575241/" href="TODO">Xiaoqian Hu</a>,
+<a target="_blank" rel="https://ruihongqiu.github.io/" href="TODO">Ruihong Qiu</a>,
+<a target="_blank" rel="https://yanran-tang.github.io/" href="TODO">Yanran Tang</a>,
+<a target="_blank" rel="https://csenw.github.io/" href="TODO">Sen Wang</a>
 </div>
 &nbsp;
 
