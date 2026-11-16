@@ -1,16 +1,15 @@
 <!-- TODO: paper title, venue, authors -->
 <h2 align="center">
-  <b>CARE-3D: &lt;Paper Title&gt;</b>
+  <b>CARE-3D: &lt;Reinforcement Learning for Evidence Grounded Agentic Reasoning in Situated 3D Scenes&gt;</b>
 </h2>
 
-<h3 align="center">
-&lt;Venue Year&gt;
-</h3>
+
 
 <div align="center" margin-bottom="6em">
-<a target="_blank" rel="external nofollow noopener" href="TODO">Author 1</a>,
-<a target="_blank" rel="external nofollow noopener" href="TODO">Author 2</a>,
-<a target="_blank" rel="external nofollow noopener" href="TODO">Author 3</a>
+<a target="_blank" rel="external nofollow noopener" href="TODO">Xiaoqian Hu</a>,
+<a target="_blank" rel="external nofollow noopener" href="TODO">Ruihong Qiu</a>,
+<a target="_blank" rel="external nofollow noopener" href="TODO">Yanran Tang</a>,
+<a target="_blank" rel="external nofollow noopener" href="TODO">Sen Wang</a>
 </div>
 &nbsp;
 
@@ -20,18 +19,13 @@
 </div>
 -->
 
-<b>CARE-3D</b> trains a Qwen3-VL-4B agent to answer situated questions in 3D scenes in two turns:
-it writes a grounding query and picks one evidence tool (object list, 3D boxes, observer-centric
-polar locations or an object image), then reasons over the returned evidence and answers. After
-SFT, the agent is post-trained with GRPO using **COAC** (counterfactual observation credit for the
-tool call) and **GCS** (tool-coverage sampling within each rollout group).
+<b>CARE-3D</b> is a reinforcement post-training framework for situated 3D question answering. Given a question and the observer’s context, a Qwen3-VL-4B agent first selects a grounding tool and queries the scene, then uses the returned evidence to answer. After supervised fine-tuning, the agent is optimized with GRPO using two components: Counterfactual Attribution of Returned Evidence (CARE), which measures how masking the returned evidence changes the likelihood of the correct answer, and Group Coverage Sampling (GCS), which adds rollouts for tools the policy selects less frequently. We evaluate CARE-3D on MSQA and Beacon3D.
 
 ## 🔥 News
 - \[2026-11\] Training and evaluation code released
 
 ## 🚀 Get Started
 
-Tested on Linux, CUDA 12.8, 2x NVIDIA H100 80GB. Run all scripts from the repository root.
 
 1. Clone the repository and create the environment.
 ```shell
@@ -72,15 +66,12 @@ export OPENAI_API_KEY=...
 bash scripts/eval/score_gpt.sh care3d
 ```
 
-Every hyper-parameter is an environment variable documented in the scripts (e.g.
-[scripts/rl/train_care3d.sh](scripts/rl/train_care3d.sh)). Changes to the vendored verl are listed
-in [verl/CARE3D_CHANGES.md](verl/CARE3D_CHANGES.md).
+
 
 ## 📝 TODO List
 
 - [x] Training code
 - [x] Evaluation code
 - [ ] arXiv paper
-- [ ] Model checkpoints
 
 <!-- TODO: choose a license for the CARE-3D code. -->
