@@ -1,15 +1,14 @@
-<!-- TODO: paper title, venue, authors -->
 <h2 align="center">
-  <b>CARE-3D: &lt;Reinforcement Learning for Evidence Grounded Agentic Reasoning in Situated 3D Scenes&gt;</b>
+  <b>CARE-3D: Reinforcement Learning for Evidence Grounded Agentic Reasoning in Situated 3D Scenes</b>
 </h2>
 
 
 
 <div align="center" margin-bottom="6em">
-<a target="_blank" rel="https://www.linkedin.com/in/xiaoqian-hu-69a575241/" href="TODO">Xiaoqian Hu</a>,
-<a target="_blank" rel="https://ruihongqiu.github.io/" href="TODO">Ruihong Qiu</a>,
-<a target="_blank" rel="https://yanran-tang.github.io/" href="TODO">Yanran Tang</a>,
-<a target="_blank" rel="https://csenw.github.io/" href="TODO">Sen Wang</a>
+<a target="_blank" rel="external nofollow noopener" href="https://www.linkedin.com/in/xiaoqian-hu-69a575241/">Xiaoqian Hu</a>,
+<a target="_blank" rel="external nofollow noopener" href="https://ruihongqiu.github.io/">Ruihong Qiu</a>,
+<a target="_blank" rel="external nofollow noopener" href="https://yanran-tang.github.io/">Yanran Tang</a>,
+<a target="_blank" rel="external nofollow noopener" href="https://csenw.github.io/">Sen Wang</a>
 </div>
 &nbsp;
 
