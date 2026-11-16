@@ -1,4 +1,4 @@
-<!-- TODO: paper title, venue, authors, links (arXiv / project page / checkpoints) -->
+<!-- TODO: paper title, venue, authors -->
 <h2 align="center">
   <b>CARE-3D: &lt;Paper Title&gt;</b>
 </h2>
@@ -11,18 +11,6 @@
 <a target="_blank" rel="external nofollow noopener" href="TODO">Author 1</a>,
 <a target="_blank" rel="external nofollow noopener" href="TODO">Author 2</a>,
 <a target="_blank" rel="external nofollow noopener" href="TODO">Author 3</a>
-</div>
-&nbsp;
-
-<div align="center">
-    <a href="TODO" target="_blank" rel="external nofollow noopener">
-    <img src="https://img.shields.io/badge/Paper-arXiv-deepgreen" alt="Paper arXiv"></a>
-    <a href="TODO" target="_blank" rel="external nofollow noopener">
-    <img src="https://img.shields.io/badge/Page-CARE--3D-9cf" alt="Project Page"></a>
-    <a href="https://huggingface.co/datasets/EricLHK/SceneCOT" target="_blank" rel="external nofollow noopener">
-    <img src="https://img.shields.io/badge/Data-SceneCOT185K-blue" alt="Data"></a>
-    <a href="TODO" target="_blank" rel="external nofollow noopener">
-    <img src="https://img.shields.io/badge/Model-CARE--3D-pink" alt="Model"></a>
 </div>
 &nbsp;
 
