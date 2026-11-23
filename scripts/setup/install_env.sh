@@ -58,7 +58,15 @@ pip install -r requirements.txt
 if [[ "${SKIP_FLASH_ATTN:-0}" != 1 ]] && ! python -c "import flash_attn" 2>/dev/null; then
   pip install flash-attn==2.8.3 --no-build-isolation
 fi
-pip install torch_scatter==2.1.2 -f https://data.pyg.org/whl/torch-2.9.0+cu128.html
+# torch_scatter: PyG's pre-built wheel needs glibc >= 2.32 (e.g. not Ubuntu 20.04); if it does
+# not import, build it from source with the selected CUDA toolkit instead.
+if ! python -c "import torch_scatter" 2>/dev/null; then
+  pip install torch_scatter==2.1.2 -f https://data.pyg.org/whl/torch-2.9.0+cu128.html
+  if ! python -c "import torch_scatter" 2>/dev/null; then
+    pip uninstall -y torch_scatter
+    FORCE_CUDA=1 pip install --no-build-isolation --no-cache-dir --no-deps torch_scatter==2.1.2
+  fi
+fi
 
 # 4) Vendored (patched) verl. Do NOT install verl from PyPI.
 pip install --no-deps -e verl
