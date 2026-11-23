@@ -18,15 +18,19 @@ export TORCH_CUDA_ARCH_LIST
 export MAX_JOBS="${MAX_JOBS:-8}"
 
 cuda_major() { "$1/bin/nvcc" --version 2>/dev/null | sed -n 's/.*release \([0-9]*\)\..*/\1/p'; }
-if [[ -z "${CUDA_HOME:-}" ]]; then
-  candidates=()
-  if command -v nvcc >/dev/null 2>&1; then candidates+=("$(dirname "$(dirname "$(command -v nvcc)")")"); fi
-  candidates+=(/usr/local/cuda $(ls -d /usr/local/cuda-12* 2>/dev/null | sort -V -r))
-  for candidate in "${candidates[@]}"; do
-    if [[ "$(cuda_major "${candidate}")" == 12 ]]; then CUDA_HOME="${candidate}"; break; fi
-  done
+candidates=()
+if [[ -n "${CUDA_HOME:-}" ]]; then candidates+=("${CUDA_HOME}"); fi
+if command -v nvcc >/dev/null 2>&1; then candidates+=("$(dirname "$(dirname "$(command -v nvcc)")")"); fi
+candidates+=(/usr/local/cuda $(ls -d /usr/local/cuda-12* 2>/dev/null | sort -V -r))
+REQUESTED_CUDA_HOME="${CUDA_HOME:-}"
+CUDA_HOME=""
+for candidate in "${candidates[@]}"; do
+  if [[ "$(cuda_major "${candidate}")" == 12 ]]; then CUDA_HOME="${candidate}"; break; fi
+done
+if [[ -n "${REQUESTED_CUDA_HOME}" && "${CUDA_HOME}" != "${REQUESTED_CUDA_HOME}" ]]; then
+  echo "CUDA_HOME=${REQUESTED_CUDA_HOME} is not a CUDA 12.x toolkit; looking for another one." >&2
 fi
-if [[ -z "${CUDA_HOME:-}" || "$(cuda_major "${CUDA_HOME}")" != 12 ]]; then
+if [[ -z "${CUDA_HOME}" ]]; then
   echo "No CUDA 12.x toolkit found. Set CUDA_HOME to one (e.g. /usr/local/cuda-12.8) or load it" \
        "(e.g. 'module load cuda/12.8'); PyTorch is built with CUDA 12.8." >&2
   exit 1
