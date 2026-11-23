@@ -5,8 +5,10 @@
 #   bash scripts/setup/install_env.sh            # creates env "care3d"
 #   ENV_NAME=myenv bash scripts/setup/install_env.sh
 #
-# Requirements: conda and a CUDA 12.8 toolkit with nvcc on PATH (for the PointNet++ CUDA
-# extension). Java (METEOR metric) is installed from conda-forge if missing.
+# Requirements: conda and a CUDA 12.x toolkit (12.8 recommended) to compile flash-attn and the
+# PointNet++ extension; its major version must match PyTorch's cu128 build. The toolkit is taken
+# from CUDA_HOME, else the nvcc on PATH, else /usr/local/cuda-12*. Java (METEOR metric) is
+# installed from conda-forge if missing. The script can be re-run to resume after a failure.
 set -euo pipefail
 cd "$(dirname "${BASH_SOURCE[0]}")/../.."
 
@@ -14,6 +16,23 @@ ENV_NAME="${ENV_NAME:-care3d}"
 TORCH_CUDA_ARCH_LIST="${TORCH_CUDA_ARCH_LIST:-8.0;8.6;8.9;9.0}"
 export TORCH_CUDA_ARCH_LIST
 export MAX_JOBS="${MAX_JOBS:-8}"
+
+cuda_major() { "$1/bin/nvcc" --version 2>/dev/null | sed -n 's/.*release \([0-9]*\)\..*/\1/p'; }
+if [[ -z "${CUDA_HOME:-}" ]]; then
+  candidates=()
+  if command -v nvcc >/dev/null 2>&1; then candidates+=("$(dirname "$(dirname "$(command -v nvcc)")")"); fi
+  candidates+=(/usr/local/cuda $(ls -d /usr/local/cuda-12* 2>/dev/null | sort -V -r))
+  for candidate in "${candidates[@]}"; do
+    if [[ "$(cuda_major "${candidate}")" == 12 ]]; then CUDA_HOME="${candidate}"; break; fi
+  done
+fi
+if [[ -z "${CUDA_HOME:-}" || "$(cuda_major "${CUDA_HOME}")" != 12 ]]; then
+  echo "No CUDA 12.x toolkit found. Set CUDA_HOME to one (e.g. /usr/local/cuda-12.8) or load it" \
+       "(e.g. 'module load cuda/12.8'); PyTorch is built with CUDA 12.8." >&2
+  exit 1
+fi
+export CUDA_HOME PATH="${CUDA_HOME}/bin:${PATH}"
+echo "Using CUDA toolkit ${CUDA_HOME}: $(nvcc --version | tail -1)"
 
 eval "$(conda shell.bash hook)"
 if ! conda env list | awk '{print $1}' | grep -qx "${ENV_NAME}"; then
@@ -28,19 +47,19 @@ pip install vllm==0.12.0
 # 2) Python dependencies (versions of the environment used for the paper)
 pip install -r requirements.txt
 
-# 3) Compiled extras
-pip install flash-attn==2.8.3 --no-build-isolation
+# 3) Compiled extras. flash-attn 2.8.3 has no pre-built wheel for torch 2.9, so pip compiles it
+#    from source, which takes a long time (lower MAX_JOBS if the build runs out of memory).
+#    SKIP_FLASH_ATTN=1 skips it; verl then computes log-probs with a plain PyTorch kernel
+#    instead of flash-attn's (same maths, slightly different numerics from the paper runs).
+if [[ "${SKIP_FLASH_ATTN:-0}" != 1 ]] && ! python -c "import flash_attn" 2>/dev/null; then
+  pip install flash-attn==2.8.3 --no-build-isolation
+fi
 pip install torch_scatter==2.1.2 -f https://data.pyg.org/whl/torch-2.9.0+cu128.html
 
 # 4) Vendored (patched) verl. Do NOT install verl from PyPI.
 pip install --no-deps -e verl
 
 # 5) PointNet++ CUDA extension used by the PQ3D 3D encoder
-if ! command -v nvcc >/dev/null 2>&1; then
-  echo "nvcc not found: load a CUDA 12.8 toolkit (e.g. 'module load cuda/12.8') and re-run." >&2
-  exit 1
-fi
-export CUDA_HOME="${CUDA_HOME:-$(dirname "$(dirname "$(command -v nvcc)")")}"
 (cd model/pointnetpp && rm -rf build ./*.egg-info && pip install --no-build-isolation -e .)
 
 # 6) Sanity checks
