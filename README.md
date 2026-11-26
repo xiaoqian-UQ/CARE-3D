@@ -10,17 +10,13 @@
 <a target="_blank" rel="external nofollow noopener" href="https://yanran-tang.github.io/">Yanran Tang</a>,
 <a target="_blank" rel="external nofollow noopener" href="https://csenw.github.io/">Sen Wang</a>
 </div>
-<div align="center">
-The University of Queensland
-</div>
-&nbsp;
+<h3 align="center">The University of Queensland</h3>
 
 <div align="center">
 <img src="static/images/care3d_framework.png" width="95%" alt="CARE-3D overview">
+<br>
+<i>Overview of CARE-3D</i>
 </div>
-<p align="center">
-<i>Overview of CARE-3D. Top: the agent selects an evidence tool (polar, Cartesian, crop, probability, ...), queries the 3D grounder, and answers from the returned evidence. Bottom: GRPO post-training with (1) Tool Group Coverage Sampling and (2) Counterfactual Attribution of Returned Evidence.</i>
-</p>
 
 <b>CARE-3D</b> is a reinforcement post-training framework for situated 3D question answering. Given a question and the observer’s context, a Qwen3-VL-4B agent first selects a grounding tool and queries the scene, then uses the returned evidence to answer. After supervised fine-tuning, the agent is optimized with GRPO using two components: Counterfactual Attribution of Returned Evidence (CARE), which measures how masking the returned evidence changes the likelihood of the correct answer, and Group Coverage Sampling (GCS), which adds rollouts for tools the policy selects less frequently. We evaluate CARE-3D on MSQA and Beacon3D.
 
@@ -75,6 +71,6 @@ bash scripts/eval/score_gpt.sh care3d
 
 - [x] Training code
 - [x] Evaluation code
-- [ ] arXiv paper
+- [x] arXiv paper
 
 <!-- TODO: choose a license for the CARE-3D code. -->
