@@ -2,7 +2,10 @@
   <b>CARE-3D: Reinforcement Learning for Evidence Grounded Agentic Reasoning in Situated 3D Scenes</b>
 </h2>
 
-
+<div align="center">
+<a target="_blank" rel="external nofollow noopener" href="https://arxiv.org/abs/2611.29969"><img src="https://img.shields.io/badge/Paper-arXiv-b31b1b?logo=arxiv&logoColor=white" alt="Paper arXiv"></a>
+</div>
+&nbsp;
 
 <div align="center" margin-bottom="6em">
 <a target="_blank" rel="external nofollow noopener" href="https://www.linkedin.com/in/xiaoqian-hu-69a575241/">Xiaoqian Hu</a>,
@@ -73,4 +76,28 @@ bash scripts/eval/score_gpt.sh care3d
 - [x] Evaluation code
 - [x] arXiv paper
 
-<!-- TODO: choose a license for the CARE-3D code. -->
+## 📜 Citation
+
+If you find our paper useful in your research, please consider citing:
+
+```bibtex
+@misc{hu2026care3dreinforcementlearningevidence,
+      title={CARE-3D: Reinforcement Learning for Evidence Grounded Agentic Reasoning in Situated 3D Scenes},
+      author={Xiaoqian Hu and Ruihong Qiu and Yanran Tang and Sen Wang},
+      year={2026},
+      eprint={2611.29969},
+      archivePrefix={arXiv},
+      url={https://arxiv.org/abs/2611.29969},
+}
+```
+
+## ⚖️ License
+
+This project is released under the [Apache License 2.0](LICENSE). The vendored [`verl/`](verl) keeps its own
+Apache-2.0 license and notice. Parts of the code are adapted from
+[SceneCOT](https://github.com/SceneCOT/scenecot) (Apache-2.0),
+[LEO](https://github.com/embodied-generalist/embodied-generalist) (MIT),
+[PQ3D](https://github.com/PQ3D/PQ3D) (MIT), [SceneVerse](https://github.com/scene-verse/SceneVerse) (MIT) and
+[Pointnet2_PyTorch](https://github.com/erikwijmans/Pointnet2_PyTorch) (Unlicense).
+The [SceneCOT data](https://huggingface.co/datasets/EricLHK/SceneCOT) used for training and evaluation are
+released under CC BY-NC 4.0 and may only be used for non-commercial purposes.
