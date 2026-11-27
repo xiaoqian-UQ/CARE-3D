@@ -3,6 +3,7 @@
 </h2>
 
 <div align="center">
+<img src="https://img.shields.io/badge/EACL%202027-Findings-1f6feb" alt="EACL 2027 Findings">
 <a target="_blank" rel="external nofollow noopener" href="https://arxiv.org/abs/2611.29969"><img src="https://img.shields.io/badge/Paper-arXiv-b31b1b?logo=arxiv&logoColor=white" alt="Paper arXiv"></a>
 </div>
 &nbsp;
@@ -24,6 +25,7 @@
 <b>CARE-3D</b> is a reinforcement post-training framework for situated 3D question answering. Given a question and the observer’s context, a Qwen3-VL-4B agent first selects a grounding tool and queries the scene, then uses the returned evidence to answer. After supervised fine-tuning, the agent is optimized with GRPO using two components: Counterfactual Attribution of Returned Evidence (CARE), which measures how masking the returned evidence changes the likelihood of the correct answer, and Group Coverage Sampling (GCS), which adds rollouts for tools the policy selects less frequently. We evaluate CARE-3D on MSQA and Beacon3D.
 
 ## 🔥 News
+- \[2026-11\] CARE-3D is accepted to EACL 2027 Findings 🎉
 - \[2026-11\] Training and evaluation code released
 
 ## 🚀 Get Started
@@ -81,13 +83,12 @@ bash scripts/eval/score_gpt.sh care3d
 If you find our paper useful in your research, please consider citing:
 
 ```bibtex
-@misc{hu2026care3dreinforcementlearningevidence,
-      title={CARE-3D: Reinforcement Learning for Evidence Grounded Agentic Reasoning in Situated 3D Scenes},
-      author={Xiaoqian Hu and Ruihong Qiu and Yanran Tang and Sen Wang},
-      year={2026},
-      eprint={2611.29969},
-      archivePrefix={arXiv},
-      url={https://arxiv.org/abs/2611.29969},
+@inproceedings{hu2027care3d,
+  title     = {CARE-3D: Reinforcement Learning for Evidence Grounded Agentic Reasoning in Situated 3D Scenes},
+  author    = {Hu, Xiaoqian and Qiu, Ruihong and Tang, Yanran and Wang, Sen},
+  booktitle = {Findings of the Association for Computational Linguistics: EACL 2027},
+  year      = {2027},
+  url       = {https://arxiv.org/abs/2611.29969}
 }
 ```
 
